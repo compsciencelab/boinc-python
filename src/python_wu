@@ -17,7 +17,7 @@
 	</file_ref>
 	<file_ref>
 		<file_number>1</file_number>
-		<open_name>data.zip</open_name>
+		<open_name>input.zip</open_name>
 		<copy_file>
 		<rboinc parameter_name="data" parameter_description="Payload data files" />
 	</file_ref>

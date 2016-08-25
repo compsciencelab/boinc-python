@@ -46,6 +46,13 @@ if os.path.exists("dependencies.txt"):
 print("Updating distro")
 os.system( conda + " update --all -y" )
 
+if os.path.exists("input.zip"):
+  print("Extracting payload data")
+  os.path.mkdir( "input" )
+  zf=zipfile.ZipFile( "input.zip" )
+  zf.extractall( "input" )
+  zf.close()
+
 if os.path.exists("payload.py"):
   print("Running payload")
   os.system( python + " payload.py" )
