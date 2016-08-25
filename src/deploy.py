@@ -36,6 +36,7 @@ if not os.path.exists( conda ) or not os.path.exists(python):
 # configure channels"
 os.system( conda + " config --add channels omnia" )
 os.system( conda + " config --add channels acellera" )
+os.system( conda + " install boinc -y" )
 
 if os.path.exists("dependencies.txt"):
   f = open( "dependencies.txt", "r" )
