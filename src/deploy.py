@@ -75,3 +75,6 @@ if os.path.exists("output"):
     print("  Adding " + f );
     zf.write( os.path.join("output", f), arcname=f )
   zf.close()
+
+f=open( "boinc_finish_called", "w" )
+f.close()
