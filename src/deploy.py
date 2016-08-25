@@ -27,7 +27,7 @@ python  = os.path.join( install_dir, "bin", "python" )
 if not os.path.exists( conda ) or not os.path.exists(python):
   print("Installing Miniconda to " + install_dir );
   installer = os.path.join( cwd, "miniconda-installer" )
-  os.chmod( installer,  0x500 )
+  os.chmod( installer,  0o500 )
   os.system( installer + " -b -f -p " + install_dir )
 # TODO:
 # pre-emptively remove any conda lock files
