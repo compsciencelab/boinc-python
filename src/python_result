@@ -1,0 +1,16 @@
+<file_info>
+	<name><OUTFILE_0/></name>
+	<generated_locally/>
+	<upload_when_present/>
+	<max_nbytes>100000000</max_nbytes>
+  <url><UPLOAD_URL/></url>
+  <gzip_when_done/>
+	<rboinc aliases=".zip"/>
+</file_info>
+<result>
+	<report_immediately/>
+	<file_ref>
+		<file_name><OUTFILE_0/></filename>
+		<open_name>results.zip</open_name>
+	</file_ref>
+</result>

@@ -1,0 +1,38 @@
+<rboinc application="Python" description="Anaconda Python 3 environment"/>
+<file_info>
+	<number>0</number>
+</file_info>
+<file_info>
+	<number>1</number>
+</file_info>
+<file_info>
+	<number>2</number>
+</file_info>
+<workunit>
+	<file_ref>
+		<file_number>0</file_number>
+		<open_name>payload.py</open_name>
+		<copy_file>
+		<rboinc parameter_name="payload" parameter_description="Payload Python script"/>
+	</file_ref>
+	<file_ref>
+		<file_number>1</file_number>
+		<open_name>data.zip</open_name>
+		<copy_file>
+		<rboinc parameter_name="data" parameter_description="Payload data files" />
+	</file_ref>
+
+	<file_ref>
+		<file_number>2</file_number>
+		<open_name>dependencies.txt</open_name>
+		<copy_file>
+		<rboinc parameter_name="dependencies" parameter_description="List of package dependencies" optional="true"/>
+	</file_ref>
+
+    <rsc_fpops_est>5.0e15</rsc_fpops_est>
+    <rsc_fpops_bound>250e15</rsc_fpops_bound>
+    <rsc_disk_bound>4000e6</rsc_disk_bound>
+    <rsc_memory_bound>300000000</rsc_memory_bound>
+    <delay_bound>432000</delay_bound>
+
+</workunit>
