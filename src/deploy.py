@@ -48,14 +48,22 @@ os.system( conda + " update --all -y" )
 
 if os.path.exists("input.zip"):
   print("Extracting payload data")
-  os.path.mkdir( "input" )
+  try:
+    os.mkdir( "input" )
+  except:
+    pass # Assume that it's an already-exists exception
   zf=zipfile.ZipFile( "input.zip" )
   zf.extractall( "input" )
   zf.close()
 
 if os.path.exists("payload.py"):
   print("Running payload")
+  print("-----");
+#  try:
   os.system( python + " payload.py" )
+#  except:
+#    print("The payload errored" );
+  print("-----");
 
 if os.path.exists("output"):
   print("Creating output archive");
