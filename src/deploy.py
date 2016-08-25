@@ -3,6 +3,7 @@
 from __future__ import print_function
 
 import os
+import stat
 import re
 import zipfile
 import glob
@@ -11,8 +12,8 @@ import glob
 cwd = os.getcwd()
 
 slot = "0"
-if re.match( "^.*/slot-[0-9]*$", cwd ):
-  slot = re.sub( "^.*/slot-", "", cwd );
+if re.match( "^.*\/slots\/[0-9]*$", cwd ):
+  slot = re.sub( "^.*\/slots\/", "", cwd );
 
 home =os.path.expanduser("~")
 install_dir = os.path.join( home, ".gpugrid", "slot-" + slot )
@@ -26,6 +27,7 @@ python  = os.path.join( install_dir, "bin", "python" )
 if not os.path.exists( conda ) or not os.path.exists(python):
   print("Installing Miniconda to " + install_dir );
   installer = os.path.join( cwd, "miniconda-installer" )
+  os.chmod( installer,  0x500 )
   os.system( installer + " -b -f -p " + install_dir )
 # TODO:
 # pre-emptively remove any conda lock files
